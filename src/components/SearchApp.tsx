@@ -476,7 +476,7 @@ export const SearchApp = () => {
                 onMoveUp={() => moveCondition(index, -1)}
                 onMoveDown={() => moveCondition(index, 1)}
                 onRemove={() => removeCondition(condition.id)}
-                control={`${condition.category === "filter" ? "フィルタ" : "変換"} > ${getConditionTypeLabel(condition)}`}
+                control={`${condition.category === "filter" ? "フィルタ" : "変換"}\n${getConditionTypeLabel(condition)}`}
               >
                 {renderConditionBody(condition)}
               </ConditionCard>
@@ -500,7 +500,6 @@ export const SearchApp = () => {
                 ))}
             </div>
           </div>
-
           <div className={styles.addSection}>
             <p className={styles.muted}>変換を追加</p>
             <div className={styles.addButtonGrid}>

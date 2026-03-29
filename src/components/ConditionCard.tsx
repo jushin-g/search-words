@@ -31,7 +31,6 @@ export const ConditionCard = ({
       )}
     >
       <div className={styles.conditionHeader}>
-        <p className={styles.conditionIndex}>条件{index + 1}</p>
         <p
           className={clsx(
             styles.typeTag,

@@ -1,5 +1,6 @@
 import type { FilterDictionaryMatchCondition } from "@/lib/types";
 import styles from "../SearchApp.module.css";
+import { DICTIONARY_NAME_MAP } from "@/constants.ts/dictionaries";
 
 type DictionaryMatchFilterBoxProps = {
   condition: FilterDictionaryMatchCondition;
@@ -24,9 +25,9 @@ export const DictionaryMatchFilterBox = ({
           value={selectedFile}
           onChange={(e) => onChangeFile(e.target.value)}
         >
-          {dictionaries.map((dict) => (
-            <option key={dict} value={dict}>
-              {dict}
+          {dictionaries.map((dictionary) => (
+            <option key={dictionary} value={dictionary}>
+              {DICTIONARY_NAME_MAP[dictionary]}
             </option>
           ))}
         </select>

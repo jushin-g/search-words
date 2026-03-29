@@ -15,6 +15,7 @@ import { LengthFilterBox } from "./filterBox/LengthFilterBox";
 import { CandidateCharsFilterBox } from "./filterBox/CandidateCharsFilterBox";
 import { ConditionCard } from "./ConditionCard";
 import { useDictionaries } from "@/hooks/useDictionaries";
+import { DICTIONARY_NAME_MAP } from "@/constants.ts/dictionaries";
 
 type UiSearchCondition = SearchCondition & { id: number };
 
@@ -451,9 +452,9 @@ export const SearchApp = () => {
               value={currentDictionary}
               onChange={(e) => setCurrentDictionary(e.target.value)}
             >
-              {dictionaries.map((dict) => (
-                <option key={dict} value={dict}>
-                  {dict}
+              {dictionaries.map((dictionary) => (
+                <option key={dictionary} value={dictionary}>
+                  {DICTIONARY_NAME_MAP[dictionary]}
                 </option>
               ))}
             </select>

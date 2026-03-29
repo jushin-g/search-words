@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f0e3;
+  --panel: #fffaf0;
+  --line: #d4c3a6;
+  --ink: #1f1d1a;
+  --muted: #5f5b52;
+  --accent: #255f48;
+  --danger: #a83b3b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background:
+    radial-gradient(circle at 10% 10%, #fff9ec 0%, transparent 28%),
+    radial-gradient(circle at 90% 0%, #eeddc0 0%, transparent 24%),
+    linear-gradient(145deg, var(--bg), #efe1c9);
+  color: var(--ink);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}

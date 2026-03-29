@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "lint:markup": "markuplint \"src/**/*.{tsx,jsx,html}\""
+    "lint": "eslint ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -16,15 +15,11 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@markuplint/html-spec": "^4.17.0",
-    "@markuplint/jsx-parser": "^4.7.23",
-    "@markuplint/react-spec": "^4.5.23",
     "@types/node": "22.14.1",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.5",
     "eslint": "^9.39.4",
     "eslint-config-next": "16.2.1",
-    "markuplint": "^4.9.2",
     "typescript": "5.8.2"
   }
 }

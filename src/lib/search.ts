@@ -309,6 +309,7 @@ export const runSearch = async (
   const defaultDictionarySet = await getDictionarySet(
     resolveDictionaryPath(defaultFile),
   );
+
   dictionaryContexts.set(defaultFile, {
     dictionarySet: defaultDictionarySet,
     dictionaryAnagramMap: buildAnagramMap(defaultDictionarySet),

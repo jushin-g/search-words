@@ -33,6 +33,7 @@ export const SearchApp = () => {
     transformColumns: [],
     results: [],
   });
+  const [searchVersion, setSearchVersion] = useState(0);
   const { dictionaries, currentDictionary, setCurrentDictionary } =
     useDictionaries();
 
@@ -414,6 +415,7 @@ export const SearchApp = () => {
     e.preventDefault();
     setLoading(true);
     setError("");
+    setSearchVersion((current) => current + 1);
 
     try {
       const res = await fetch("/api/search", {
@@ -530,6 +532,7 @@ export const SearchApp = () => {
 
       {error ? <p className={styles.errorText}>{error}</p> : null}
       <ResultTable
+        key={searchVersion}
         rows={result.results}
         matched={result.matched}
         transformColumns={result.transformColumns}

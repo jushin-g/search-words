@@ -16,6 +16,7 @@
 }
 
 .tableWrap {
+  max-height: 70vh;
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: 10px;
